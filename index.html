@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wagner Rafael - Portfolio TI</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="cabecalho">
+        <div class="container">
+            <h1 class="nome">Wagner Rafael</h1>
+            <p class="profissao">Desenvolvedor Júnior | Iniciante em TI</p>
+        </div>
+    </header>
+
+    
+    <section class="sobreMim">
+        <div class="container">
+            <div class="flexContainer">
+                <div class="fotoContainer">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop&crop=face" alt="Foto Wagner Rafael" class="fotoPerfil">
+                </div>
+                <div class="textoApresentacao">
+                    <h2>Sobre Mim</h2>
+                    <p>Olá! Sou Wagner Rafael, um entusiasta da tecnologia apaixonado por programação e soluções digitais. Recentemente iniciei minha jornada na área de TI e estou me dedicando ao aprendizado de desenvolvimento web, sistemas e infraestrutura.</p>
+                    <p>Meu objetivo é criar soluções inovadoras e contribuir para projetos que façam a diferença. Sempre em busca de novos desafios e oportunidades para crescer profissionalmente!</p>
+                    <div class="infoPessoal">
+                        <h3>Informações Pessoais</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP</li>
+                            <li><i class="fas fa-birthday-cake"></i> 25 anos</li>
+                            <li><i class="fas fa-graduation-cap"></i> Formação em Análise e Desenvolvimento de Sistemas</li>
+                            <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="habilidades">
+        <div class="container">
+            <h2>Minhas Habilidades</h2>
+            <div class="gridHabilidades">
+                <div class="skillCard">
+                    <i class="fab fa-html5 iconHabilidade"></i>
+                    <h3>HTML5</h3>
+                    <div class="barraProgresso">
+                        <div class="progresso" data-percentual="85"></div>
+                    </div>
+                </div>
+                <div class="skillCard">
+                    <i class="fab fa-css3-alt iconHabilidade"></i>
+                    <h3>CSS3</h3>
+                    <div class="barraProgresso">
+                        <div class="progresso" data-percentual="80"></div>
+                    </div>
+                </div>
+                <div class="skillCard">
+                    <i class="fab fa-js-square iconHabilidade"></i>
+                    <h3>JavaScript</h3>
+                    <div class="barraProgresso">
+                        <div class="progresso" data-percentual="65"></div>
+                    </div>
+                </div>
+                <div class="skillCard">
+                    <i class="fab fa-git-alt iconHabilidade"></i>
+                    <h3>Git</h3>
+                    <div class="barraProgresso">
+                        <div class="progresso" data-percentual="70"></div>
+                    </div>
+                </div>
+                <div class="skillCard">
+                    <i class="fas fa-database iconHabilidade"></i>
+                    <h3>SQL</h3>
+                    <div class="barraProgresso">
+                        <div class="progresso" data-percentual="60"></div>
+                    </div>
+                </div>
+                <div class="skillCard">
+                    <i class="fab fa-linux iconHabilidade"></i>
+                    <h3>Linux</h3>
+                    <div class="barraProgresso">
+                        <div class="progresso" data-percentual="55"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="flexContainer">
+                <div class="infoContato">
+                    <p><i class="fas fa-envelope"></i> wagner.rafael.dev@gmail.com</p>
+                    <div class="redesSociais">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <form class="formContato">
+                    <input type="text" placeholder="Seu nome" required>
+                    <input type="email" placeholder="Seu email" required>
+                    <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; <span id="anoAtual"></span> Wagner Rafael. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        
+        document.getElementById('anoAtual').textContent = new Date().getFullYear();
+
+        
+        window.addEventListener('load', function() {
+            const progressos = document.querySelectorAll('.progresso');
+            progressos.forEach(progresso => {
+                const percentual = progresso.getAttribute('data-percentual');
+                progresso.style.width = percentual + '%';
+            });
+        });
+    </script>
+</body>
+</html>
